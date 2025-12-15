@@ -11,15 +11,9 @@ export default defineConfig(({ mode }) => {
       'process.env.API_KEY': JSON.stringify(env.API_KEY),
     },
 
-    // ❌ dev専用なので本番では不要（削除）
-    // server: {
-    //   port: 3000,
-    // },
-
-    // ✅ Railway対応（本番は preview を使う）
     preview: {
       host: true,
-      port: process.env.PORT, // Railway指定PORTを使用
+      port: Number(process.env.PORT), // ★ここが重要
       allowedHosts: ['.railway.app'],
     },
   };
