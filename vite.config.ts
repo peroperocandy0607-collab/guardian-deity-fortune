@@ -11,9 +11,9 @@ export default defineConfig(({ mode }) => {
       'process.env.API_KEY': JSON.stringify(env.API_KEY),
     },
 
+    // ★ Railwayでは PORT を絶対に指定しない
     preview: {
       host: true,
-      port: Number(process.env.PORT), // ★ここが重要
       allowedHosts: ['.railway.app'],
     },
   };
