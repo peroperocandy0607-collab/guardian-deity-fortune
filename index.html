@@ -58,7 +58,19 @@
 }
 </script>
 <link rel="stylesheet" href="/index.css">
-    <link rel="manifest" href="/manifest.json" />
+
+<!-- PWA manifest -->
+<link rel="manifest" href="/manifest.json" />
+
+<!-- iOS 専用（これが無いとアプリにならない） -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="守護神占い">
+
+<!-- iOS アイコン指定（超重要） -->
+<link rel="apple-touch-icon" href="/icon-192.png">
+
+<!-- テーマカラー -->
 <meta name="theme-color" content="#b89868" />
 </head>
   <body>
